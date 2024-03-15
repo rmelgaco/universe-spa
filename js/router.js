@@ -1,17 +1,22 @@
+import * as actions from './actions.js'
 export class Router {
     routes = {}
-
+    
     add(routeName, page){
         this.routes[routeName] = page
     }
-
+    
     route(event){
         event = event || window.event
         event.preventDefault()
+        
+        window.history.pushState({}, "", event.currentTarget.href)
 
-        window.history.pushState({}, "", event.target.href)
-
+        console.log(event.currentTarget.href);
+        
         this.handle()
+        actions.selectPage()
+        actions.changeBackground()
     }
 
     handle(){
@@ -23,7 +28,5 @@ export class Router {
         .then(html => {
             document.querySelector('#app').innerHTML = html
         })
-
-        console.log(route);
     }
 }

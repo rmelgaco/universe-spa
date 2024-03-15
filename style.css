@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    --heading-color: #C4C4CC;
+    --text-color: #E1E1E6;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: navy;
+    height: 100vh;
+}
+
+.bg-home {
+    background-image: url(./assets/mountains-universe-1.png);
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+}
+
+.bg-universe {
+    background-image: url(./assets/mountains-universe-2.png);
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+}
+
+.bg-exploration {
+    background-image: url(./assets/mountains-universe-3.png);
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+}
+
+nav {
+    font-size: 2.2rem;
+    display: flex;
+    align-items: center;
+    gap: 5.6rem;
+    padding: 4rem 0 4rem 7.2rem;
+
+    position: absolute;
+    top: 0;
+}
+
+.selected {
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+a {
+    color: var(--heading-color);
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.home-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.home-page, .error-page {
+    gap: 2.4rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.universe-page, .exploration-page{
+    gap: 1.6rem;
+    justify-content: center;
+    align-items: start;
+    padding-left: 10.4rem;
+    width: 50%;
+}
+
+h1 {
+    color: var(--text-color);
+    font-size: 4.8rem;
+    font-weight: 700;
+    line-height: 125%;
+}
+
+p, h2 {
+    color: var(--text-color);
+    font-size: 1.8rem;
+    line-height: 160%;
+}
+
+.home-button {
+    background: none;
+    cursor: pointer;
+    padding: 1.2rem 3.2rem;
+    border: 2px solid #fff;
+    border-radius: 5px;
+
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 2.4rem;
+    text-transform: uppercase;
+}
